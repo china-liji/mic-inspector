@@ -1,0 +1,70 @@
+{
+  "name": "mic-inspector",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "inspector"
+  ],
+  "main": "build/lib/index.js",
+  "module": "build/es/index.js",
+  "unpkg": "build/dist/antd.min.js",
+  "typings": "build/lib/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "npm run dist",
+    "dist": "webpack --mode=production -p",
+    "es": "tsc --module esnext --outDir build/es --target esnext",
+    "lib": "tsc --module commonjs --outDir build/lib --target es5",
+    "lint-all": "eslint src/* --ext .tsx,.ts",
+    "prebuild": "npm run es",
+    "prees": "npm run lib",
+    "prelib": "rm -rf ./build",
+    "prepare": "npm run build",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/china-liji/mic-inspector"
+  },
+  "author": "Michael Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/china-liji/mic-inspector/issues"
+  },
+  "homepage": "https://github.com/china-liji/mic-inspector#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-inspector": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/parser": "^3.0.1",
+    "css-loader": "^3.5.3",
+    "eslint": "^7.1.0",
+    "eslint-plugin-react": "^7.20.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "mic-global": "^1.1.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-inspector": "^5.0.1",
+    "react-jss": "^10.1.1",
+    "style-loader": "^1.1.3",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.9.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": "npm run lint-all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

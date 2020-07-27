@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "module": "ES2015",
+    "jsx": "react",
+    "declaration": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "outDir": "lib",
+    "target": "es5",
+    "baseUrl": "./src",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["*"]
+    },
+  },
+  "include": [
+    "src"
+  ]
+}

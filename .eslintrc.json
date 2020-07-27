@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+  ],
+  "settings": {
+    "react": {
+      "version": "^16.13.1"
+    }
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-fallthrough": "off",
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "@typescript-eslint/arrow-return-shorthand": "off",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/interface-name": "off",
+    "@typescript-eslint/label-position": "off",
+    "@typescript-eslint/max-line-length": "off",
+    "@typescript-eslint/no-bitwise": "off",
+    "@typescript-eslint/no-console": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/no-shadowed-variable": "off",
+    "@typescript-eslint/restrict-template-expressions": [
+      "error",
+      {
+        "allowBoolean": true
+      }
+    ]
+  }
+}
