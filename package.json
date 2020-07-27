@@ -1,6 +1,6 @@
 {
   "name": "mic-inspector",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "",
   "keywords": [
     "inspector",
@@ -11,7 +11,7 @@
   ],
   "main": "build/lib/index.js",
   "module": "build/es/index.js",
-  "unpkg": "build/dist/antd.min.js",
+  "unpkg": "build/dist/index.min.js",
   "typings": "build/lib/index.d.ts",
   "files": [
     "build"
