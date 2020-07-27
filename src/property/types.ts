@@ -1,10 +1,10 @@
 import { InlineComponentProps } from 'mic-global';
-import { DescribableObjectProps, UndescribableObjectProps } from '../inspector/types';
+import { DescribableObjectProps, NondescribableObjectProps } from '../inspector/types';
 
 /**
  * Property props
  */
-export type PropertyProps = PropertyOwnProps & (DescribableObjectProps | UndescribableObjectProps);
+export type PropertyProps = PropertyOwnProps & (DescribableObjectProps | NondescribableObjectProps);
 
 /**
  * Property own props interface

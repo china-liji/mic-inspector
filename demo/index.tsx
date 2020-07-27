@@ -27,8 +27,8 @@ export function Demo(): React.ReactElement {
       </blockquote>
       <blockquote>
         <h4>Inspector</h4>
-        <Inspector propertyName='document' propertyValue={document} />
-        <Inspector propertyName='object' propertyValue={obj} />
+        <Inspector name='document' data={document} />
+        <Inspector name='object' data={obj} />
       </blockquote>
       <blockquote>
         <h4>Properties</h4>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { DescribableObjectProps, UndescribableObjectProps } from '../inspector/types';
+import { DescribableObjectProps, NondescribableObjectProps } from '../inspector/types';
 import { PropertyProps, PropertyOwnProps } from './types';
 import { renderValue } from './locale';
 import { useStyles } from './use-styles';
@@ -25,7 +25,7 @@ export function Property(props: PropertyProps): React.ReactElement {
     propertyValue,
     propertyDescriptor = new NamedDescriptor(null, propertyName, propertyValue, DescriptorValueType.Normal, !isNonenumerable),
     ...ps
-  } = props as PropertyOwnProps & DescribableObjectProps & UndescribableObjectProps;
+  } = props as PropertyOwnProps & DescribableObjectProps & NondescribableObjectProps;
 
   const { fullname, nameType, value, enumerable } = propertyDescriptor;
   const expandable = !preview && isObjectOrFunction(value);

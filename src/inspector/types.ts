@@ -16,16 +16,6 @@ export interface DescribableObjectProps extends ObjectProps {
    * Property descriptor
    */
   propertyDescriptor: NamedDescriptor;
-}
-
-/**
- * Undescribable object props interface
- */
-export interface UndescribableObjectProps extends ObjectProps {
-  /**
-   * A boolean represents whether the object property is non-enumerable
-   */
-  isNonenumerable?: boolean;
 
   /**
    * Property name
@@ -39,11 +29,31 @@ export interface UndescribableObjectProps extends ObjectProps {
 }
 
 /**
+ * Undescribable object props interface
+ */
+export interface NondescribableObjectProps extends ObjectProps {
+  /**
+   * A boolean represents whether the object property is non-enumerable
+   */
+  isNonenumerable?: boolean;
+}
+
+/**
  * Inspector props interface
  */
-export interface InspectorProps extends BlockComponentProps, UndescribableObjectProps {
+export interface InspectorProps extends BlockComponentProps<'name' | 'data'>, NondescribableObjectProps {
   /**
    * No any children
    */
   children?: never[];
+
+  /**
+   * A string represents the displayed name
+   */
+  name: PropertyNameType;
+
+  /**
+   * Inspected data
+   */
+  data: PropertyValueType;
 }

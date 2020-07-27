@@ -10,7 +10,6 @@
     "outDir": "lib",
     "target": "es5",
     "baseUrl": "./src",
-    "skipLibCheck": true,
     "paths": {
       "@/*": ["*"]
     },
