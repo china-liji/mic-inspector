@@ -26,6 +26,6 @@ import { Inspector } from 'mic-inspector';
 const obj = { a: 1, b: 2, get self() { return obj; } };
 
 <Inspector name='document' data={document} />;
-<Inspector name='object' data={anyObj} />;
+<Inspector name='object' data={obj} />;
 ```
 
