@@ -96,7 +96,7 @@ export const renderObjectSubs = (object: ReferenceTypes, arrayLike: boolean, max
   }
   else {
     objectSubs.push(
-      <i key={length + 1} data-separator={ObjectValueSeparator.Spread}>...</i>
+      <i key={objectSubs.length + 1} data-separator={ObjectValueSeparator.Spread}>...</i>
     );
   }
 
