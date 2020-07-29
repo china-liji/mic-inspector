@@ -6,7 +6,6 @@ export const useStyles = createPropertyComponentStyles(
   {
     width: Percent.M1,
     display: 'block',
-    verticalAlign: 'middle',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
