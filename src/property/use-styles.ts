@@ -4,8 +4,8 @@ import { createPropertyComponentStyles } from '../locale';
 export const useStyles = createPropertyComponentStyles(
   'property',
   {
-    maxWidth: Percent.M1,
-    display: 'inline-block',
+    width: Percent.M1,
+    display: 'block',
     verticalAlign: 'middle',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -20,9 +20,10 @@ export const useStyles = createPropertyComponentStyles(
         top: 0,
         content: '"▶"',
         color: Gray.L6,
+        transform: 'translateY(-5%)',
       },
       '&[data-expand="true"] > q::before': {
-        transform: 'rotateZ(90deg)',
+        transform: 'rotateZ(90deg) translateY(-5%)',
       },
     },
     '& > q': {
