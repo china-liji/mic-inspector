@@ -48,12 +48,12 @@ export interface InspectorProps extends BlockComponentProps<'name' | 'data'>, No
   children?: never[];
 
   /**
-   * A string represents the displayed name
+   * A specific property name to display
    */
   name: PropertyNameType;
 
   /**
-   * Inspected data
+   * Any type data that you want to inspect
    */
   data: PropertyValueType;
 }
