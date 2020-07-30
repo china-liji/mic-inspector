@@ -27,8 +27,8 @@ export function Demo(): React.ReactElement {
       </blockquote>
       <blockquote>
         <h4>Inspector</h4>
-        <Inspector name='document' data={document} />
-        <Inspector name='object' data={obj} />
+        <Inspector name='document' value={document} />
+        <Inspector name='object' value={obj} />
       </blockquote>
       <blockquote>
         <h4>Properties</h4>
@@ -36,7 +36,7 @@ export function Demo(): React.ReactElement {
       </blockquote>
       <blockquote>
         <h4>Property</h4>
-        <Property propertyName='object' propertyValue={obj} isNonenumerable={false} />
+        <Property name='object' value={obj} isNonenumerable={false} />
       </blockquote>
       <blockquote>
         <h4>PropertyName</h4>

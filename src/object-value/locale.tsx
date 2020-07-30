@@ -84,7 +84,7 @@ export const renderObjectSubs = (object: ReferenceTypes, arrayLike: boolean, max
     }
 
     objectSubs.push(
-      <Property key={length} propertyDescriptor={descriptor} preview />,
+      <Property key={length} descriptor={descriptor} preview />,
       <i key={length + 1} data-separator={ObjectValueSeparator.Comma}>,</i>
     );
   }

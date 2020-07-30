@@ -9,18 +9,18 @@ import { UnknownObject } from 'mic-global';
 
 /**
  * A method to render the property value
- * @param propertyDescriptor The property descriptor
+ * @param descriptor The property descriptor
  * @param preview A boolean represents whether display mode of object properties are preview
  */
-export const renderValue = (propertyDescriptor: NamedDescriptor, preview = false): ReactElement => {
-  const { get, owner } = propertyDescriptor;
+export const renderValue = (descriptor: NamedDescriptor, preview = false): ReactElement => {
+  const { get, owner } = descriptor;
 
   // if get accessor existed
   if (get) {
     return <GetterValue owner={owner} value={get} />;
   }
 
-  const { value } = propertyDescriptor;
+  const { value } = descriptor;
 
   switch (typeof value) {
     case 'number':

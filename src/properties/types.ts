@@ -10,7 +10,7 @@ export interface PropertiesProps extends InlineComponentProps {
   children?: never[];
 
   /**
-   * An object as the owner that has these properties
+   * An object that provides the properties to inspect
    */
   owner: ReferenceTypes;
 

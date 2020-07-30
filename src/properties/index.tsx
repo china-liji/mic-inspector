@@ -7,7 +7,7 @@ import { NamedDescriptor } from '../named-descriptor';
 import { PropertiesProps } from './types';
 
 /**
- * Properties that a property list
+ * Property list
  * @param param0 PropertiesProps
  */
 export function Properties({ className, preview, owner, ...props }: PropertiesProps): ReactElement {
@@ -18,7 +18,7 @@ export function Properties({ className, preview, owner, ...props }: PropertiesPr
   return (
     <InlineComponent className={useStyles(className)} {...props}>{
       descriptors.map((descriptor: NamedDescriptor, index: number): ReactElement => {
-        return <Property key={index} propertyDescriptor={descriptor} preview={preview} />;
+        return <Property key={index} descriptor={descriptor} preview={preview} />;
       })
     }</InlineComponent>
   );
