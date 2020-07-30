@@ -8,10 +8,10 @@ import { Property } from '../property';
  * Inspector
  * @param param0 InspectorProps
  */
-export function Inspector({ className, name, value, isNonenumerable, ...props }: InspectorProps): React.ReactElement {
+export function Inspector({ className, defaultExpand, name, value, isNonenumerable, ...props }: InspectorProps): React.ReactElement {
   return (
     <BlockComponent className={useStyles(className)} {...props}>{
-      <Property name={name} value={value} isNonenumerable={isNonenumerable} />
+      <Property name={name} value={value} defaultExpand={defaultExpand} isNonenumerable={isNonenumerable} />
     }</BlockComponent>
   );
 }

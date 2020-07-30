@@ -28,7 +28,7 @@ export function Demo(): React.ReactElement {
       <blockquote>
         <h4>Inspector</h4>
         <Inspector name='document' value={document} />
-        <Inspector name='object' value={obj} />
+        <Inspector name='object' value={obj} defaultExpand />
       </blockquote>
       <blockquote>
         <h4>Properties</h4>
@@ -36,7 +36,7 @@ export function Demo(): React.ReactElement {
       </blockquote>
       <blockquote>
         <h4>Property</h4>
-        <Property name='object' value={obj} isNonenumerable={false} />
+        <Property name='object' value={obj} defaultExpand isNonenumerable={false} />
       </blockquote>
       <blockquote>
         <h4>PropertyName</h4>
@@ -59,7 +59,7 @@ export function Demo(): React.ReactElement {
         <dl>
           <dt>GetterStatus.Protected -&gt; GetterStatus.Unexpected</dt>
           <dd>
-          <GetterValue value={Object.getOwnPropertyDescriptor(obj, 'self')!.get as Getter} owner={null} />
+            <GetterValue value={Object.getOwnPropertyDescriptor(obj, 'self')!.get as Getter} owner={null} />
           </dd>
         </dl>
       </blockquote>

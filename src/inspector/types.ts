@@ -12,6 +12,11 @@ export interface InspectorProps extends BlockComponentProps<'name' | 'value'> {
   children?: never[];
 
   /**
+   * A boolean represents whether this property should be expand by default
+   */
+  defaultExpand?: boolean;
+
+  /**
    * A boolean represents whether the object property is non-enumerable
    */
   isNonenumerable?: boolean;

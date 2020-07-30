@@ -18,6 +18,11 @@ export interface PropertyOwnProps extends InlineComponentProps<'name' | 'value'>
   children?: never[];
 
   /**
+   * A boolean represents whether this property should be expand by default
+   */
+  defaultExpand?: boolean;
+
+  /**
    * Property descriptor
    */
   descriptor?: unknown;
@@ -33,7 +38,8 @@ export interface PropertyOwnProps extends InlineComponentProps<'name' | 'value'>
   value?: unknown;
   
   /**
-   * A boolean represents whether display mode of object properties is preview
+   * A boolean represents whether enable the preview mode.
+   * In preview mode, the property can not expand and show sub properties of an object
    */
   preview?: boolean;
 }

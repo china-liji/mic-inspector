@@ -26,7 +26,7 @@ export interface PropertyNameProps extends InlineComponentProps<'name' | 'type'>
   name: PropertyNameType;
 
   /**
-   * Property name type
+   * Property name type, only for query this component in css.
    */
   type?: DescriptorNameType;
 }

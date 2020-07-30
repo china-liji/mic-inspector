@@ -37,12 +37,12 @@ export interface GetterValueProps extends PropertyValueProps {
   children?: never[];
 
   /**
-   * The object to be used as the 'this' in getter method
+   * A specific object that will be used as the 'this' in the getter method.
    */
   owner: unknown;
 
   /**
-   * A getter method
+   * A specific method that will be called by click this component, and display the returned value
    */
   value: Getter;
 }

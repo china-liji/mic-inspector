@@ -14,8 +14,8 @@ import { Properties } from '../properties';
  * @param props PropertyProps
  */
 export function Property(props: PropertyProps): React.ReactElement {
-  const [expand, setExpand] = useState(false);
-  const { className, preview, isNonenumerable, name, value, ...ps } = props as NondescribablePropertyProps;
+  const { className, preview, isNonenumerable, name, value, defaultExpand = false, ...ps } = props as NondescribablePropertyProps;
+  const [expand, setExpand] = useState(defaultExpand);
 
   const {
     descriptor = new NamedDescriptor(null, name, value, DescriptorValueType.Normal, !isNonenumerable),

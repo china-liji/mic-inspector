@@ -10,7 +10,7 @@ export type PropertyValueType = PrimaryTypes;
  */
 export interface PropertyValueProps extends InlineComponentProps<'value'> {
   /**
-   * Property value type
+   * Any type data that you want to inspect
    */
   value?: PropertyValueType;
 }
