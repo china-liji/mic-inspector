@@ -1,60 +1,65 @@
-import { createStyles, EM, Style } from 'mic-global';
+import { createStyles, EM } from 'mic-global';
 import { DescriptorNameType } from '../named-descriptor/types';
 import { ObjectValueSeparator } from './types';
+import { ClassName } from '../types';
 
 export const useStyles = createStyles(
-  'object-value',
-  ([property, propertyName]: [string, string]): Style => {
-    return {
-      '&[data-array-like="true"]': {
-        [`& .${propertyName}[data-type$='${DescriptorNameType.Index.toString(2)}']`]: {
-          display: 'none',
-        },
-        '& > q': {
-          '&::before': {
-            content: '"["',
-          },
-          '&::after': {
-            content: '"]"',
-          },
-        },
+  ClassName.ObjectValue,
+  {
+    '&[data-arraylike="true"]': {
+      ['&[data-array-length="0"] > span > i']: {
+        display: 'none',
       },
-      '&[data-node="true"]': {
-        '& > span': {
-          color: '#881391',
-        },
-        '& > q': {
-          display: 'none',
-        },
+      [`& .${ClassName.PropertyName}[data-type$='${DescriptorNameType.Index.toString(2)}']`]: {
+        display: 'none',
       },
-      '&:not([data-node="true"]) > span:not(:empty)': {
-        marginRight: EM.S5,
+      '& > span > i': {
+        fontStyle: 'normal',
       },
       '& > q': {
-        '&:empty': {
-          maxWidth: 'none',
-          overflow: 'visible',
-          letterSpacing: EM.S2,
-        },
         '&::before': {
-          content: '"{"',
+          content: '"["',
         },
         '&::after': {
-          content: '"}"',
-        },
-        '& > i': {
-          [`&[data-separator="${ObjectValueSeparator.Comma}"]`]: {
-            marginRight: EM.S5,
-          },
+          content: '"]"',
         },
       },
-      [`& .${propertyName} > span`]: {
-        color: 'inherit !important',
+    },
+    '&[data-node="true"]': {
+      '& > span': {
+        color: '#881391',
       },
-      [`& .${property}`]: {
-        display: 'inline',
+      '& > q': {
+        display: 'none',
+      },
+    },
+    '&:not([data-node="true"]) > span:not(:empty)': {
+      marginRight: EM.S5,
+    },
+    '& > q': {
+      '&:empty': {
         maxWidth: 'none',
+        overflow: 'visible',
+        letterSpacing: EM.S2,
       },
-    };
+      '&::before': {
+        content: '"{"',
+      },
+      '&::after': {
+        content: '"}"',
+      },
+      '& > i': {
+        [`&[data-separator="${ObjectValueSeparator.Comma}"]`]: {
+          marginRight: EM.S5,
+        },
+      },
+    },
+    [`& .${ClassName.PropertyName} > span`]: {
+      color: 'inherit !important',
+    },
+    [`& .${ClassName.Property}`]: {
+      display: 'inline',
+      maxWidth: 'none',
+    },
   }
 );

@@ -9,7 +9,7 @@ import { isObjectOrFunction } from '../property-value/locale';
 
 export const { Object, Node } = window;
 
-export const arrayLikeMethodNames = !window.Symbol ? ['entries', 'forEach', 'item', 'keys', 'split', 'values'] : [Symbol.iterator];
+export const arraylikeMethodNames = !window.Symbol ? ['entries', 'forEach', 'item', 'keys', 'split', 'values'] : [Symbol.iterator];
 
 /**
  * Returns a string represents object name
@@ -35,11 +35,11 @@ export const getObjectName = (value: UnknownObject, isNode: boolean): string => 
 /**
  * A method to fitler object subs
  * @param param0 A descriptor of the object
- * @param arrayLike A boolean represents whether the object is an array
+ * @param arraylike A boolean represents whether the object is an array
  */
-export const objectSubsFilter = ({ get, set, nameType, valueType, value, enumerable }: NamedDescriptor, arrayLike: boolean): boolean => {
+export const objectSubsFilter = ({ get, set, nameType, valueType, value, enumerable }: NamedDescriptor, arraylike: boolean): boolean => {
   // if the object is an array
-  if (arrayLike) {
+  if (arraylike) {
     return (nameType & DescriptorNameType.Index) === DescriptorNameType.Index;
   }
 
@@ -63,10 +63,10 @@ export const objectSubsFilter = ({ get, set, nameType, valueType, value, enumera
 /**
  * A method to render object subs
  * @param object The object value
- * @param arrayLike A boolean represents whether the object is an array
+ * @param arraylike A boolean represents whether the object is an array
  * @param maxPropertyLength A number represents the length of object properties to preview
  */
-export const renderObjectSubs = (object: ReferenceTypes, arrayLike: boolean, maxPropertyLength = 5): ReactElement[] => {
+export const renderObjectSubs = (object: ReferenceTypes, arraylike: boolean, maxPropertyLength = 5): ReactElement[] => {
   const objectSubs = [] as ReactElement[];
   
   // for each descriptors
@@ -79,7 +79,7 @@ export const renderObjectSubs = (object: ReferenceTypes, arrayLike: boolean, max
     }
 
     // if descriptor has filtered
-    if (!objectSubsFilter(descriptor, arrayLike)) {
+    if (!objectSubsFilter(descriptor, arraylike)) {
       continue;
     }
 
@@ -119,7 +119,7 @@ export const useArrayInfo = (value: ObjectValueType): [boolean, number] => {
       // the the length property in the object
       if ('length' in value) {
         // for each array method names
-        for (const name of arrayLikeMethodNames as string[]) {
+        for (const name of arraylikeMethodNames as string[]) {
           // if this method is a function
           if (typeof value[name] === 'function') {
             break tryBlock;

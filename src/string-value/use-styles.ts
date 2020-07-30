@@ -1,7 +1,8 @@
 import { createStyles } from 'mic-global';
+import { ClassName } from '../types';
 
 export const useStyles = createStyles(
-  'string-value',
+  ClassName.StringValue,
   {
     '& > q': {
       quotes: 'none',

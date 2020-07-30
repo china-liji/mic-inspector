@@ -1,7 +1,8 @@
 import { createStyles, Black } from 'mic-global';
+import { ClassName } from '../types';
 
 export const useStyles = createStyles(
-  'dom-inspector',
+  ClassName.DomInspector,
   {
     '& li[role="treeitem"]': {
       color: `${Black.L2} !important`,

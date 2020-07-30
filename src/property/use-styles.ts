@@ -1,8 +1,9 @@
-import { Gray, Percent, EM } from 'mic-global';
+import { Gray, Percent, EM, Style } from 'mic-global';
 import { createPropertyComponentStyles } from '../locale';
+import { ClassName } from '../types';
 
 export const useStyles = createPropertyComponentStyles(
-  'property',
+  ClassName.Property,
   {
     width: Percent.M1,
     display: 'block',
@@ -21,8 +22,18 @@ export const useStyles = createPropertyComponentStyles(
         color: Gray.L6,
         transform: 'translateY(-5%)',
       },
-      '&[data-expand="true"] > q::before': {
-        transform: 'rotateZ(90deg) translateY(-5%)',
+      '&[data-expand="true"] > q': {
+        '&::before': {
+          transform: 'rotateZ(90deg) translateY(-5%)',
+        },
+        [`& > .${ClassName.ObjectValue}`]: {
+          '&[data-arraylike="true"][data-array-length="0"] > span > i': {
+            display: 'inline',
+          },
+          '& > q': {
+            display: 'none',
+          },
+        },
       },
     },
     '& > q': {

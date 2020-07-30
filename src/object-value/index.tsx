@@ -1,8 +1,6 @@
 import React, { useMemo } from 'react';
 import { ObjectValueProps } from './types';
 import { useStyles } from './use-styles';
-import { useStyles as usePropertyStyles } from '../property/use-styles';
-import { useStyles as usePropertyNameStyles } from '../property-name/use-styles';
 import { renderObjectSubs, useArrayInfo, Node, getObjectName } from './locale';
 import { PropertyValue } from '../property-value';
 
@@ -11,7 +9,7 @@ import { PropertyValue } from '../property-value';
  * @param param0 ObjectValueProps
  */
 export function ObjectValue({ className, value, preview, maxPropertyLength, ...props }: ObjectValueProps): React.ReactElement {
-  const [arrayLike, length] = useArrayInfo(value);
+  const [arraylike, length] = useArrayInfo(value);
   const isNode = value ? value instanceof Node : false;
 
   const name = useMemo((): string => {
@@ -20,29 +18,25 @@ export function ObjectValue({ className, value, preview, maxPropertyLength, ...p
 
   return (
     <PropertyValue
-      className={
-        useStyles(
-          [
-            usePropertyStyles(),
-            usePropertyNameStyles(),
-          ],
-          className
-        )
-      }
+      className={useStyles(className)}
       data-node={isNode}
       data-preview={!!preview}
-      data-array-like={arrayLike}
+      data-arraylike={arraylike}
+      data-array-length={length}
       {...props}
     >
-      <span>{name + (arrayLike && length ? `(${length})` : '')}</span>
+      <span>
+        {name}
+        {arraylike ? <i>({length})</i> : null}
+      </span>
       <q>{
         preview || isNode ?
           (
-            arrayLike || isNode ?
+            arraylike || isNode ?
               '' :
               '...'
           ) :
-          renderObjectSubs(value, arrayLike, maxPropertyLength)
+          renderObjectSubs(value, arraylike, maxPropertyLength)
       }</q>
     </PropertyValue>
   );
