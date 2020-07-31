@@ -105,6 +105,12 @@ export function Demo(): React.ReactElement {
       </blockquote>
       <blockquote>
         <h4>UnknownValue</h4>
+        <UnknownValue value={obj} />
+        <br />
+        <UnknownValue value='abc' />
+        <br />
+        <UnknownValue value={123} />
+        <br />
         <UnknownValue value={undefined} />
         <br />
         <UnknownValue value={true} />

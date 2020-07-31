@@ -38,7 +38,7 @@ export interface PropertyOwnProps extends InlineComponentProps<'name' | 'value'>
   value?: unknown;
   
   /**
-   * A boolean represents whether enable the preview mode.
+   * A boolean represents whether enable the preview mode
    * In preview mode, the property can not expand and show sub properties of an object
    */
   preview?: boolean;

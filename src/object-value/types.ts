@@ -30,13 +30,13 @@ export interface ObjectValueProps extends PropertyValueProps {
   maxPropertyLength?: number;
   
   /**
-   * A boolean represents whether enable the preview mode.
-   * In preview mode, the property can not expand and show sub properties of an object
+   * A boolean represents whether enable the preview mode
+   * In preview mode, the property will not show sub properties
    */
   preview?: boolean;
 
   /**
-   * The object value
+   * Any object that you want to inspect
    */
   value: ObjectValueType;
 }

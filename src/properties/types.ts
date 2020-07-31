@@ -15,7 +15,7 @@ export interface PropertiesProps extends InlineComponentProps {
   owner: ReferenceTypes;
 
   /**
-   * A boolean represents whether enable the preview mode.
+   * A boolean represents whether enable the preview mode
    * In preview mode, the property can not expand and show sub properties of an object
    */
   preview?: boolean;
