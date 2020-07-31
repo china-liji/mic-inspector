@@ -5,7 +5,7 @@ import { NamedDescriptor } from '../named-descriptor';
 import { renderGetterContent } from './locale';
 import { PropertyValue } from '../property-value';
 import { GetterStatus, GetterValueProps } from './types';
-import { PropertyValueType } from '@/property-value/types';
+import { PropertyValueType } from '../property-value/types';
 
 /**
  * Getter type value that's one type of property value types

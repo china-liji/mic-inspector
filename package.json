@@ -1,7 +1,7 @@
 {
   "name": "mic-inspector",
-  "version": "1.2.4",
-  "description": "",
+  "version": "1.2.5",
+  "description": "A react inspector which a most similar of Chorme DevTools inspector",
   "keywords": [
     "inspector",
     "react",
@@ -32,7 +32,10 @@
     "type": "git",
     "url": "git+https://github.com/china-liji/mic-inspector"
   },
-  "author": "Michael Lee",
+  "author": {
+    "name": "Michael Lee",
+    "email": "hello_zaizi@163.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/china-liji/mic-inspector/issues"
@@ -58,10 +61,10 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
     "style-loader": "^1.1.3",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.9.3",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11",
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.10.3"
   },
   "lint-staged": {

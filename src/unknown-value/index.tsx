@@ -3,9 +3,9 @@ import { UnknownValueProps } from './types';
 import { PropertyValue } from '../property-value';
 import { useStyles } from './use-styles';
 import { isObjectOrFunction } from '../property-value/locale';
-import { NumberValue } from '@/number-value';
-import { ObjectValue } from '@/object-value';
-import { StringValue } from '@/string-value';
+import { NumberValue } from '../number-value';
+import { ObjectValue } from '../object-value';
+import { StringValue } from '../string-value';
 import { UnknownObject } from 'mic-global';
 import { ObjectValue as ReactInspectorObjectValue } from 'react-inspector';
 

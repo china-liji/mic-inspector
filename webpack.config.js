@@ -57,9 +57,6 @@ module.exports = (env, argv) => {
 
   this.resolve = {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    alias: {
-      '@': `${__dirname}/src`,
-    },
   };
 
   return this;

@@ -1,7 +1,7 @@
 import { InlineComponentProps } from 'mic-global';
-import { PropertyNameType } from '@/property-name/types';
-import { PropertyValueType } from '@/property-value/types';
-import { NamedDescriptor } from '@/named-descriptor';
+import { PropertyNameType } from '../property-name/types';
+import { PropertyValueType } from '../property-value/types';
+import { NamedDescriptor } from '../named-descriptor';
 
 /**
  * Property props
