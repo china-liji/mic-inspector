@@ -7,6 +7,16 @@ export const useStyles = createStyles(
   ClassName.ObjectValue,
   {
     '&[data-arraylike="true"]': {
+      '&[data-preview="true"]': {
+        '& > span': {
+          marginRight: 0,
+        },
+        '& > q': {
+          '&::before, &::after': {
+            display: 'none',
+          },
+        },
+      },
       ['&[data-array-length="0"]:not([data-preview="true"]) > span > i']: {
         display: 'none',
       },
@@ -22,11 +32,6 @@ export const useStyles = createStyles(
         },
         '&::after': {
           content: '"]"',
-        },
-      },
-      '&[data-preview="true"] > q': {
-        '&::before, &::after': {
-          display: 'none',
         },
       },
     },
