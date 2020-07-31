@@ -91,7 +91,7 @@ export function Demo(): React.ReactElement {
         <dl>
           <dt>array - preview mode</dt>
           <dd>
-            <ObjectValue value={[1, 2, 3]} preview />
+            <ObjectValue value={[]} preview />
           </dd>
         </dl>
       </blockquote>

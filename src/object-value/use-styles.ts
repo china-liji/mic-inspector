@@ -7,7 +7,7 @@ export const useStyles = createStyles(
   ClassName.ObjectValue,
   {
     '&[data-arraylike="true"]': {
-      ['&[data-array-length="0"] > span > i']: {
+      ['&[data-array-length="0"]:not([data-preview="true"]) > span > i']: {
         display: 'none',
       },
       [`& .${ClassName.PropertyName}[data-type$='${DescriptorNameType.Index.toString(2)}']`]: {
@@ -25,7 +25,9 @@ export const useStyles = createStyles(
         },
       },
       '&[data-preview="true"] > q': {
-        qoutes: 'none',
+        '&::before, &::after': {
+          display: 'none',
+        },
       },
     },
     '&[data-node="true"]': {

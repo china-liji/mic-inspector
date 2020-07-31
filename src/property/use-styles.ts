@@ -1,4 +1,4 @@
-import { Gray, Percent, EM, Style } from 'mic-global';
+import { Gray, Percent, EM } from 'mic-global';
 import { createPropertyComponentStyles } from '../locale';
 import { ClassName } from '../types';
 

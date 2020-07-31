@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { PropertyProps, NondescribablePropertyProps, DescribablePropertyProps } from './types';
 import { renderValue } from './locale';
 import { useStyles } from './use-styles';
-import { useStyles as useObjectValueStyles } from '../object-value/use-styles';
 import { isObjectOrFunction } from '../property-value/locale';
 import { NamedDescriptor } from '../named-descriptor';
 import { DescriptorValueType } from '../named-descriptor/types';
