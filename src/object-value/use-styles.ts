@@ -24,6 +24,9 @@ export const useStyles = createStyles(
           content: '"]"',
         },
       },
+      '&[data-preview="true"] > q': {
+        qoutes: 'none',
+      },
     },
     '&[data-node="true"]': {
       '& > span': {
