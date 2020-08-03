@@ -1,5 +1,7 @@
 # `Mic-Inspector`
-A `react` inspector which a most similar of `Chorme DevTools` inspector. Here is a [demo](https://china-liji.github.io/mic-books/#/mic/mic-inspector/readme) that you can inspect something.
+A `react` inspector which a most similar of `Chorme DevTools` inspector.
+
+Here is a [demo](https://china-liji.github.io/mic-books/#/mic/mic-inspector/readme) that you can inspect something by this component.
 
 ### Installation
 ```sh
