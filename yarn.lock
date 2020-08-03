@@ -3339,10 +3339,10 @@ methods@~1.1.2:
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
   integrity sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=
 
-mic-global@^1.1.12:
-  version "1.1.12"
-  resolved "https://registry.npmjs.org/mic-global/-/mic-global-1.1.12.tgz#79fa1d1110ab0d64071c84f54b044006df91628a"
-  integrity sha512-NEax1GRXMHKiHxvjm4z0YmoKjjrX1dozUydT0N/3EzqvXgkR3WAH5EUH6ulB5xGljhcHPF9ZHA+BJRqQJk/KSA==
+mic-global@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.npmjs.org/mic-global/-/mic-global-1.1.13.tgz#715b8d108b882af6bd8453ea5d9340f2b3195f51"
+  integrity sha512-xeHSwV6CX9YaJUYng8hQEbTvpFVsWkoxhvvVVdBhfju8TYCpYPPQoXL6Z3litRcqL3uy2Ru08/DeUcIdElAt6A==
   dependencies:
     jss "^10.3.0"
     react "^16.13.1"

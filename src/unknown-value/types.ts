@@ -10,7 +10,7 @@ export interface UnknownValueProps extends PropertyValueProps {
   children?: never[];
 
   /**
-   * A specific property value
+   * Any type data that you want to inspect
    */
   value: PropertyValueType;
 }
