@@ -1,10 +1,11 @@
 {
   "name": "mic-inspector",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "A react inspector which a most similar of Chorme DevTools inspector",
   "keywords": [
     "inspector",
     "react",
+    "react-inspector",
     "object-inspector",
     "dom-inspector",
     "devtools"
