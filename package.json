@@ -1,6 +1,6 @@
 {
   "name": "mic-inspector",
-  "version": "1.2.9",
+  "version": "1.2.10",
   "description": "A react inspector which a most similar of Chorme DevTools inspector",
   "keywords": [
     "inspector",
@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/china-liji/mic-inspector#readme",
   "dependencies": {
-    "mic-global": "^1.1.13",
+    "mic-global": "^1.1.16",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-inspector": "^5.0.1",

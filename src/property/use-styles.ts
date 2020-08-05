@@ -19,7 +19,7 @@ export const useStyles = createPropertyComponentStyles(
         left: 0,
         top: 0,
         content: '"▶"',
-        color: Gray.L6,
+        color: Gray.L11,
         transform: 'translateY(-5%)',
       },
       '&[data-expand="true"] > q': {

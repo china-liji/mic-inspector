@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
   };
 
   this.entry = {
-    'dist': path.resolve(__dirname, `./${isProd ? 'src/index.ts' : 'demo/index.tsx'}`),
+    'dist': path.resolve(__dirname, `./${isProd ? 'src/index.ts' : 'test/index.tsx'}`),
   };
 
   this.module = {
@@ -44,7 +44,7 @@ module.exports = (env, argv) => {
           minifyCSS: true
         },
         filename: `${isProd ? `${distDir}/` : ''}index.html`,
-        template: 'demo/index.html'
+        template: 'test/index.html'
       }),
     ];
   }
