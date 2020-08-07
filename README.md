@@ -1,7 +1,7 @@
 # `Mic-Inspector`
 A `react` inspector which a most similar of `Chorme DevTools` inspector.
 
-Here is a [demo](https://china-liji.github.io/mic-books/#/mic/mic-inspector/readme?lang=en-us) that you can inspect something by this component.
+Here is a [demo](https://china-liji.github.io/mic-books/#/mic-inspector/readme?lang=en-us) that you can inspect something by this component.
 
 ### Installation
 ```sh
@@ -30,14 +30,14 @@ import { DomInspector } from 'mic-inspector';
 ```
 
 ### Components
-* [&lt;Inspector /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/inspector?lang=en-us)
-* [&lt;DomInspector /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/dom-inspector?lang=en-us)
-* [&lt;Properties /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/properties?lang=en-us)
-* [&lt;Property /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/property?lang=en-us)
-* [&lt;PropertyName /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/property-name?lang=en-us)
-* [&lt;PropertyValue /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/property-value?lang=en-us)
-* [&lt;GetterValue /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/getter-value?lang=en-us)
-* [&lt;NumberValue /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/number-value?lang=en-us)
-* [&lt;ObjectValue /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/object-value?lang=en-us)
-* [&lt;StringValue /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/string-value?lang=en-us)
-* [&lt;UnknownValue /&gt;](https://china-liji.github.io/mic-books/#/mic/mic-inspector/unknown-value?lang=en-us)
+* [&lt;Inspector /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/inspector?lang=en-us)
+* [&lt;DomInspector /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/dom-inspector?lang=en-us)
+* [&lt;Properties /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/properties?lang=en-us)
+* [&lt;Property /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/property?lang=en-us)
+* [&lt;PropertyName /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/property-name?lang=en-us)
+* [&lt;PropertyValue /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/property-value?lang=en-us)
+* [&lt;GetterValue /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/getter-value?lang=en-us)
+* [&lt;NumberValue /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/number-value?lang=en-us)
+* [&lt;ObjectValue /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/object-value?lang=en-us)
+* [&lt;StringValue /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/string-value?lang=en-us)
+* [&lt;UnknownValue /&gt;](https://china-liji.github.io/mic-books/#/mic-inspector/unknown-value?lang=en-us)
