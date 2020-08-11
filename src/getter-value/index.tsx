@@ -11,28 +11,29 @@ import { PropertyValueType } from '../property-value/types';
  * Getter type value that's one type of property value types
  * @param param0 GetterValueProps
  */
-export function GetterValue({ className, owner, value, ...props }: GetterValueProps): React.ReactElement {
+export function GetterValue({ className, owner, value, onAccess: onAccessCallback, ...props }: GetterValueProps): React.ReactElement {
   const [status, setStatus] = useState(GetterStatus.Protected);
   const [descriptor, setDescriptor] = useState<NamedDescriptor>();
 
   const onAccess = (): void => {
-    let returnValue: PropertyValueType;
+    let returnedValue: PropertyValueType;
     let status: GetterStatus;
 
     try {
-      returnValue = value.call(owner) as PropertyValueType;
+      returnedValue = value.call(owner) as PropertyValueType;
       status = GetterStatus.Opened;
     }
     catch(e) {
-      returnValue = `${e instanceof Error && e.stack ? e.stack : e as string}`;
+      returnedValue = `${e instanceof Error && e.stack ? e.stack : e as string}`;
       status = GetterStatus.Unexpected;
     }
 
     setDescriptor(
-      new NamedDescriptor(owner, '', returnValue, DescriptorValueType.Normal)
+      new NamedDescriptor(owner, '', returnedValue, DescriptorValueType.Normal)
     );
 
     setStatus(status);
+    onAccessCallback && onAccessCallback(status, returnedValue, value, owner);
   };
 
   return (

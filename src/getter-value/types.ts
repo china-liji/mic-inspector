@@ -37,7 +37,16 @@ export interface GetterValueProps extends PropertyValueProps {
   children?: never[];
 
   /**
-   * A specific object that will be used as the 'this' in the getter method.
+   * An event triggered by click this component.
+   * @param status Getter status
+   * @param returnedValue The returned value or unexcepted error string
+   * @param getter The getter method
+   * @param owner A specific object that will be used as the 'this' in the getter method
+   */
+  onAccess?(status: GetterStatus, returnedValue: PropertyValueType, getter: Getter, owner: unknown): void;
+
+  /**
+   * A specific object that will be used as the 'this' in the getter method
    */
   owner: unknown;
 

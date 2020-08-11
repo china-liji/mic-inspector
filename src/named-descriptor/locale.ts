@@ -51,6 +51,22 @@ export const sortNamedDescriptors = (descriptor1: NamedDescriptor, descriptor2: 
   const { name: n1, valueType: v1 } = descriptor1;
   const { name: n2, valueType: v2 } = descriptor2;
 
+  // if the name of the first one is number
+  if (!Number.isNaN(+n1.toString())) {
+    // if the name of the second one is number too
+    if (!Number.isNaN(+n2.toString())) {
+      return n1 as number - (n2 as number) < 0 ? -1 : 1;
+    }
+
+    // insert the descriptor1 before descriptor2
+    return -1;
+  }
+  // if the name of the second one is number
+  else if(!Number.isNaN(+n2.toString())) {
+    // insert the descriptor2 before descriptor1
+    return 1;
+  }
+
   // if the first one is __proto__
   if (n1 === PROTO) {
     // insert the descriptor2 before descriptor1
