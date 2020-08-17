@@ -23,7 +23,7 @@ export function Test(): React.ReactElement {
     <div className={useStyles()}>
       <blockquote>
         <h4>DomInspector</h4>
-        <DomInspector dom={document} />
+        <DomInspector dom={document} expandLevel={2} />
       </blockquote>
       <blockquote>
         <h4>Inspector</h4>
