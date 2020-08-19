@@ -37,6 +37,7 @@ export function Test(): React.ReactElement {
       <blockquote>
         <h4>Property</h4>
         <Property name='object' value={obj} defaultExpand isNonenumerable={false} />
+        <Property name='object' value={obj} separator=' =' />
         <Property name='array' value={'123'.repeat(10).split('')} />
         <Property name='obj' value={{ '+': 1, 0: 0, 'a': 'a', '-1': 99 }} />
       </blockquote>

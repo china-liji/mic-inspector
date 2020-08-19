@@ -31,17 +31,22 @@ export interface PropertyOwnProps extends InlineComponentProps<'name' | 'value'>
    * Property name
    */
   name?: unknown;
-
-  /**
-   * Property value
-   */
-  value?: unknown;
   
   /**
    * A boolean represents whether enable the preview mode
    * In preview mode, the property can not expand and show sub properties of an object
    */
   preview?: boolean;
+
+  /**
+   * A string represents the separator between property name and property value, default value is ':'
+   */
+  separator?: string;
+
+  /**
+   * Property value
+   */
+  value?: unknown;
 }
 
 /**

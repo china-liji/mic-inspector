@@ -14,7 +14,7 @@ import { Properties } from '../properties';
  * @param props PropertyProps
  */
 export function Property(props: PropertyProps): React.ReactElement {
-  const { className, preview, isNonenumerable, name, value, defaultExpand = false, ...ps } = props as NondescribablePropertyProps;
+  const { className, preview, isNonenumerable, name, value, separator, defaultExpand = false, ...ps } = props as NondescribablePropertyProps;
   const [expand, setExpand] = useState(defaultExpand);
 
   const {
@@ -37,7 +37,7 @@ export function Property(props: PropertyProps): React.ReactElement {
       {...p}
     >
       <q onClick={onToggle}>
-        <PropertyName name={fullname} type={nameType} dimmed={!enumerable} />
+        <PropertyName name={fullname} separator={separator} type={nameType} dimmed={!enumerable} />
         {renderValue(descriptor, preview)}
       </q>
       {
