@@ -10,7 +10,7 @@ import { DescriptorNameType } from '../named-descriptor/types';
  * Property name
  * @param param0 PropertyNameProps
  */
-export function PropertyName({ className, name, type, dimmed, ...props }: PropertyNameProps): React.ReactElement {
+export function PropertyName({ className, name, type, dimmed, separator = ':', ...props }: PropertyNameProps): React.ReactElement {
   const nameString = name.toString();
   
   const currentType = useMemo((): DescriptorNameType => {
@@ -25,7 +25,7 @@ export function PropertyName({ className, name, type, dimmed, ...props }: Proper
       {...props}
     >
       <ObjName name={nameString} dimmed={dimmed} />
-      <q>:</q>
+      <q>{separator}</q>
     </InlineComponent>
   );
 }

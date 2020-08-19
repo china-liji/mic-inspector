@@ -26,6 +26,11 @@ export interface PropertyNameProps extends InlineComponentProps<'name' | 'type'>
   name: PropertyNameType;
 
   /**
+   * A string represents the separator between property name and property value, default value is ':'
+   */
+  separator?: string;
+
+  /**
    * Property name type, only for query this component in css.
    */
   type?: DescriptorNameType;

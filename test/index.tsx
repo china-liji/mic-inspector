@@ -45,6 +45,8 @@ export function Test(): React.ReactElement {
         <PropertyName name='enumerable' />
         <br />
         <PropertyName name='nonenumerable' dimmed />
+        <br />
+        <PropertyName name='separator' separator='=' />
       </blockquote>
       <blockquote>
         <h4>PropertyValue</h4>
