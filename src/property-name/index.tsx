@@ -21,6 +21,7 @@ export function PropertyName({ className, name, type, dimmed, separator = ':', .
     <InlineComponent
       className={useStyles(className)}
       title={nameString}
+      data-separator={separator}
       data-type={currentType.toString(2)}
       {...props}
     >

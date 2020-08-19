@@ -7,7 +7,10 @@ export const useStyles = createPropertyComponentStyles(
   {
     '& > q': {
       quotes: 'none',
-      marginRight: EM.S5,
+      margin: [0, EM.S4],
+    },
+    '&[data-separator=":"] > q': {
+      marginLeft: 0,
     },
   }
 );
