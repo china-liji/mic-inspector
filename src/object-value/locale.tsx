@@ -9,7 +9,7 @@ import { isObjectOrFunction } from '../property-value/locale';
 
 export const { Object, Node } = window;
 
-export const arraylikeMethodNames = [...(!window.Symbol ? [] : [window.Symbol]), 'entries', 'forEach', 'item', 'keys', 'split', 'values'];
+export const arraylikeMethodNames = [...(!window.Symbol ? [] : [Symbol.iterator]), 'entries', 'forEach', 'item', 'keys', 'split', 'values'];
 
 /**
  * Returns a string represents object name
