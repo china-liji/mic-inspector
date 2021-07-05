@@ -14,6 +14,7 @@ export const useStyles = createPropertyComponentStyles(
     '&[data-expandable="true"]': {
       position: 'relative',
       paddingLeft: EM.M1,
+      boxSizing: 'border-box',
       '& > q::before': {
         position: 'absolute',
         left: 0,

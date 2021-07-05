@@ -1,11 +1,12 @@
-import { createStyles, EM } from 'mic-global';
+import { createStyles, EM, Percent } from 'mic-global';
 import { ClassName } from '../types';
 
 export const useStyles = createStyles(
   ClassName.Properties,
   {
-    width: '100%',
+    width: Percent.M1,
     paddingLeft: EM.M1,
+    boxSizing: 'border-box',
     '&, & > span': {
       display: 'block',
     },
