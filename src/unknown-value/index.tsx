@@ -14,22 +14,27 @@ import { ObjectValue as ReactInspectorObjectValue } from 'react-inspector';
  * @param param0 UnknownValueProps
  */
 export function UnknownValue({ className, value, ...props }: UnknownValueProps): React.ReactElement {
+  const type = typeof value;
+
   const ps = {
     className: useStyles(className),
     ...(
       isObjectOrFunction(value) ?
         {} :
-        { title: `${value as string}` }
+        { title: `${(type === 'symbol' ? Symbol.prototype.toString.call(value) : value) as string}` }
     ),
     ...props,
   };
 
-  switch (typeof value) {
+  switch (type) {
     case 'number':
-      return <NumberValue value={value} {...ps} />;
+      return <NumberValue value={value as number} {...ps} />;
+
+    case 'symbol':
+      return <StringValue value={value as string} before='' after='' {...ps} />;
 
     case 'string':
-      return <StringValue value={value} {...ps} />;
+      return <StringValue value={value as string} {...ps} />;
 
     case 'object':
       if (value) {
